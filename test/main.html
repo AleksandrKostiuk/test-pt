@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="main">
+<input type="text" name="account" id="account" placeholder="Account">
+</div>
+
+<div class="wrapper">
+<div class="smart-search-block">
+    <form>
+    <input type="text" name="id" id="id" placeholder="AccountID">
+    <input type="text" name="alias" id="alias" placeholder="Alias">
+    <input type="text" name="company" id="company" placeholder="CompanyName">
+    </form>
+</div>
+</div>
+
+
+<script src="jquery-2.2.0.js"></script>
+<script src="smartSearch.js"></script>
+<script>
+$().ready(function(){
+    $("#account").smartSearch('init', {'defaultItemNumber': 15}).smartSearch('show').smartSearch('hide');
+
+});
+</script>
+</body>
+</html>
